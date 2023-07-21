@@ -143,6 +143,33 @@ function pluck(data, property) {
 }
 
 
+//6. У вас есть массив чисел, представляющий количества продаж продуктов на вашем сайте интернет-магазина за последние 7 дней. Ваша задача состоит в том, чтобы написать функцию, которая будет находить все дни, когда количество продаж было выше количества продаж в предыдущий день.
+//
+// const sales = [10, 15, 12, 8, 20, 14, 16];
+// const increasedDays = findDaysWithIncreasedSales(sales);
+// console.log(increasedDays); // [1, 4, 6]
+
+//1й вариант
+const findDayWithIncreasedSales = (sales) => {
+  const resultArr = []
+  for (let i=1; i < sales.length; i++){
+    if (sales[i]>sales[i-1]){
+      resultArr.push(i)
+    }
+  }
+  return  resultArr
+}
+const sales = [10, 15, 12, 8, 20, 14, 16]
+const increaseDays = findDayWithIncreasedSales(sales)
+console.log(increaseDays)
+
+//2й вариант (индексы записать в массив не получилось)
+const findDayWithIncreasedSales_ = (sales) => {
+  return  sales.filter((el, i)=>el>sales[i-1])
+}
+const sales_ = [10, 15, 12, 8, 20, 14, 16]
+const increaseDays_ = findDayWithIncreasedSales_(sales_)
+console.log(increaseDays_)
 
 
 
