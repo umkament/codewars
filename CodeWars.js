@@ -190,7 +190,13 @@ console.log(increaseDays_)
 // }
 // squareSum([1,2,3])
 
+// 2 вариант решения данной задачи
 
+// function squareSum(numbers){
+//   return numbers.reduce(function(sum, n){
+//     return (n*n) + sum;
+//   }, 0)
+// }
 
 
 
