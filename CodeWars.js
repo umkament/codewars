@@ -1,3 +1,4 @@
+/*
 //1. Write a function which calculates the average of the numbers in a given list.
   // Note: Empty arrays should return 0.
 
@@ -171,7 +172,23 @@ const sales_ = [10, 15, 12, 8, 20, 14, 16]
 const increaseDays_ = findDayWithIncreasedSales_(sales_)
 console.log(increaseDays_)
 
+*/
 
+// Complete the square sum function so that it squares each number passed into it and then sums the results together.
+//
+// For example, for [1, 2, 2] it should return 9 because
+
+// function squareSum(numbers){
+//   const arr = []
+//
+//   for(let i=0; i< numbers.length; i++) {
+//     arr.push(numbers[i]**2)
+//   }
+//   let sum = 0
+//   arr.forEach(el=> sum+= el)
+//   return sum
+// }
+// squareSum([1,2,3])
 
 
 
