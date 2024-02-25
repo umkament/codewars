@@ -236,9 +236,31 @@ function reverseWords1(str) {
 const strStr1 = 'hello world and others'
 reverseWords1(strStr1)*/
 
+//Write a function that accepts an integer n and a string s as parameters,
+// and returns a string of s repeated exactly n times.
+/*function repeatString(n, s){
+  let result = ''
+  for (let i=0; i<n; i++) {
+    result += s
+  }
+  return result
+}
+console.log(repeatString(3, '6c'))*/
 
+//  вариант с использованием метода repeat()
+//  function repeatString(n, s) {
+//    return s.repeat(n)
+//  }
+// repeatString(4, 'umka')
 
-
+//Given an array of integers, return a new array with each value doubled.
+// function maps(x){
+//   let arr = []
+//   for (let i=0; i <= x.length-1; i++){
+//     arr.push(x[i]*2)
+//   }
+//   return arr
+// }
 
 
 
