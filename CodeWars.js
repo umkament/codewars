@@ -201,10 +201,27 @@ console.log(increaseDays_)
 //Complete the solution so that it returns true if the first argument(string)
 // passed in ends with the 2nd argument (also a string).
 
-function solution (str, ending) {
+/*function solution (str, ending) {
   return str.endsWith(ending)
 }
-solution('hello', 'lo')
+solution('hello', 'lo')*/
+
+//Complete the function that accepts a string parameter,
+// and reverses each word in the string. All spaces in the string should be retained.
+
+/*function reverseWords(str) {
+  //создаем массив из слов, используя пробел как разделитель
+  const words = str.split(' ')
+  //создаем копию массива в котором сначала каждое слово разбиваем по буквам, затем переворачиваем, а потом снова лепим слово
+  const reversedWords = words.map (word => {
+    return word.split('').reverse().join('')
+  })
+  //затем получившийся массив превращаем в строку
+  return reversedWords.join(' ')
+}
+
+const strStr = 'hello world and others'
+reverseWords(strStr)*/
 
 
 
