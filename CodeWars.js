@@ -223,7 +223,18 @@ solution('hello', 'lo')*/
 const strStr = 'hello world and others'
 reverseWords(strStr)*/
 
+// короткий вариант записи предыдущей задачи таков
+/*function reverseWords(str) {
+  return str.split(' ').map(function(word){
+    return word.split('').reverse().join('');
+  }).join(' ');
+}
 
+function reverseWords1(str) {
+  return str.split("").reverse().join("").split(" ").reverse().join(" ");
+}
+const strStr1 = 'hello world and others'
+reverseWords1(strStr1)*/
 
 
 
