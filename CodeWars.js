@@ -288,9 +288,40 @@ console.log(repeatString(3, '6c'))*/
 // but you should add spaces between each word. Be careful, there shouldn't be a space at the beginning
 // or the end of the sentence!
 
-function smash (words) {
-  return words.join(' ')
-};
+// function smash (words) {
+//   return words.join(' ')
+// };
+
+//In DNA strings, symbols "A" and "T" are complements of each other, as "C" and "G".
+// Your function receives one side of the DNA (string, except for Haskell);
+// you need to return the other complementary side. DNA strand is never empty or
+// there is no DNA at all (again, except for Haskell).
+//"ATTGC" --> "TAACG"
+// "GTAT" --> "CATA"
+
+// function dnaStrand(dna){
+//   let and = ''
+//   for (let i=0; i<dna.length; i++){
+//     switch (dna[i]){
+//       case 'A':
+//         and += 'T';
+//         break;
+//       case 'T':
+//         and += 'A';
+//         break;
+//       case 'C':
+//         and += 'G';
+//         break;
+//       case 'G':
+//         and += 'C';
+//         break;
+//       default:
+//         and+='';
+//         break;
+//     }
+//   }
+//   return and
+// }
 
 
 
