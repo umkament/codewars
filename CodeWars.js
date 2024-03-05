@@ -498,3 +498,31 @@ function longest2(s1, s2) {
 
 //поскольку строка сама по себе итерируемый объект, Set убирает повторяющиеся элементы
 // затем создается массив, который сортируется и объединяется в строку
+
+/*
+After a hard quarter in the office you decide to get some rest on a vacation.
+So you will book a flight for you and your girlfriend and try to leave all the mess behind you.
+
+   You will need a rental car in order for you to get around in your vacation.
+   The manager of the car rental makes you some good offers.
+
+   Every day you rent the car costs $40. If you rent the car for 7 or more days, you get $50 off your total.
+   Alternatively, if you rent the car for 3 or more days, you get $20 off your total.
+
+   Write a code that gives out the total amount for different days(d).*/
+
+function rentalCarCost(d) {
+  let sum = 40*d
+  if (d>=7){
+    return sum - 50
+  } else if (d>=3 && d<7){
+    return sum - 20
+  } else return sum
+}
+
+//короткое решение через тернарный оператр
+
+function rentalCarCost1(d) {
+  return 40*d - (d>=7 ? 50 :((d>=3 && d<7) ? 20 : 0))
+}
+//  получается, что мы каждый раз углубляемся и таким образом доходим до 0
