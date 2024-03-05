@@ -456,3 +456,11 @@ You might know some pretty large perfect squares. But what about the NEXT one?
 //   return Number.isInteger(findNumber) ? Math.pow(findNumber+1,2) : -1
 //
 // }
+
+//еще вариант короткой записи
+//если первое выражение не равно 0, знаит это true и возвращено будет -1
+// если же остаток 0 - это false, поэтому возвращается следующеее условие
+
+function findNextSquare(sq) {
+  return Math.sqrt(sq) % 1 ? -1 : Math.pow(Math.sqrt(sq) + 1, 2);
+}
