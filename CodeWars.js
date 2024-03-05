@@ -449,3 +449,10 @@ You might know some pretty large perfect squares. But what about the NEXT one?
 //
 //   return -1;
 // }
+
+//более короткая запись
+// function findNextSquare(sq) {
+//   let findNumber = Math.sqrt(sq)
+//   return Number.isInteger(findNumber) ? Math.pow(findNumber+1,2) : -1
+//
+// }
