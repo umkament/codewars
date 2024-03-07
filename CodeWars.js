@@ -558,3 +558,14 @@ Note: base is a non-negative number, factor is a positive number.*/
 function checkForFactor (base, factor) {
   return base % factor === 0;
 }
+
+//ищем среднее значение и возвращаем соответствующую букву
+
+function getGrade (s1, s2, s3) {
+  const avg = (s1 + s2 + s3) / 3;л
+  if (avg < 60)  return "F";
+  else if (avg < 70) return "D";
+  else if (avg < 80) return "C";
+  else if (avg < 90) return "B";
+  else return "A";
+}
