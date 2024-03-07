@@ -569,3 +569,52 @@ function getGrade (s1, s2, s3) {
   else if (avg < 90) return "B";
   else return "A";
 }
+/*
+
+There is a bus moving in the city which takes and drops some people at each bus stop.
+
+   You are provided with a list (or array) of integer pairs.
+   Elements of each pair represent the number of people that get on the bus (the first item)
+   and the number of people that get off the bus (the second item) at a bus stop.
+
+   Your task is to return the number of people who are still on the bus after
+   the last bus stop (after the last array). Even though it is the last bus stop,
+   the bus might not be empty and some people might still be inside the bus, they are probably sleeping there :D
+
+Take a look on the test cases.
+
+   Please keep in mind that the test cases ensure that the number of people in the bus is always >= 0.
+    So the returned integer can't be negative.
+
+The second value in the first pair in the array is 0, since the bus is empty in the first bus stop.*/
+
+
+var number = function(busStops){
+  let passanger = 0
+  for (let i = 0; i<busStops.length; i++){
+    passanger += busStops[i][0] - busStops[i][1]
+  }
+  return passanger
+}
+
+/*
+You are given an odd-length array of integers, in which all of them are the same, except for one single number.
+
+   Complete the method which accepts such an array, and returns that single different number.
+
+   The input array will always be valid! (odd-length >= 3)
+
+Examples
+
+   [1, 1, 2] ==> 2
+   [17, 17, 3, 17, 17, 17, 17] ==> 3*/
+
+//использовать операцию ХОР (^) - которая находит уникальное число в массиве
+
+function stray(numbers) {
+  let number = 0
+  for (let i=0; i<numbers.length; i++){
+    number ^= numbers[i]
+  }
+  return number
+}
