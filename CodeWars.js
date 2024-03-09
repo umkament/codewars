@@ -647,3 +647,7 @@ function sumNumbersUpTo(n) {
 }
 
 console.log(sumNumbersUpTo(5)); // Выведет 15
+
+//сокращенная запись предыдущего ответа
+
+var summation1 = (num) => num * (num+1)/2
