@@ -669,3 +669,9 @@ patrick feeney => P.F*/
 function abbrevName(name){
   return name.split(' ').map(el=>el.charAt(0).toUpperCase()).join('.')
 }
+ //вариант, где метод charAt не нужен
+function abbrevName1(name){
+
+  return name.split(' ').map(i => i[0].toUpperCase()).join('.')
+
+}
