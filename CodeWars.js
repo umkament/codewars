@@ -651,3 +651,6 @@ console.log(sumNumbersUpTo(5)); // Выведет 15
 //сокращенная запись предыдущего ответа
 
 var summation1 = (num) => num * (num+1)/2
+
+//Write a function which converts the input string to uppercase.
+var makeUpperCase = (str) => str.toUpperCase()
