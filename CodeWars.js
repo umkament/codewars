@@ -693,3 +693,13 @@ function count(string) {
   }
   return obj;
 }
+
+//можно записать через тернарный оператор и через создание массива
+function count1 (string) {
+  var count = {};
+  string.split('').forEach(function(s) {
+    count[s] ? count[s]++ : count[s] = 1;
+  });
+  return count;
+}
+
