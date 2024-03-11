@@ -861,3 +861,12 @@ function deleteNth(arr,n){
   }
   return newArr
 }
+
+//решение через фильтр
+function deleteNth1(arr,x) {
+  var cache = {};
+  return arr.filter(function(n) {
+    cache[n] = (cache[n]||0) + 1;
+    return cache[n] <= x;
+  });
+}
