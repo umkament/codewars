@@ -802,7 +802,7 @@ function findNb(m) {
 
 //короткое решение
 
-function findNb(m) {
+function findNb1(m) {
   var n = 0
   while (m > 0) m -= ++n**3
   return m ? -1 : n
