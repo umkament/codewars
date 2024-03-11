@@ -807,3 +807,28 @@ function findNb1(m) {
   while (m > 0) m -= ++n**3
   return m ? -1 : n
 }
+
+/*Clock shows h hours, m minutes and s seconds after midnight.
+
+Your task is to write a function which returns the time since midnight in milliseconds.
+
+вернуть время в миллисекундах*/
+
+var past = (h, m, s) => (h*3600 + m*60 + s)*1000
+
+/*Introduction
+
+The first century spans from the year 1 up to and including the year 100, the second century - from the year 101 up to and including the year 200, etc.
+
+Task
+
+Given a year, return the century it is in.*/
+
+function century(year) {
+  return Math.ceil(year/100)
+}
+
+//2-й вариант решение через побитовый оператор округления
+function century1(year) {
+  return (year + 99) / 100 | 0;
+}
