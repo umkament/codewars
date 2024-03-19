@@ -1058,3 +1058,53 @@ function duplicateCount1(text){
     return arr.indexOf(val) !== i && arr.lastIndexOf(val) === i;
   }).length;
 }
+
+/*Given two integers a and b, which can be positive or negative, find the sum of all the integers between and including them and return it. If the two numbers are equal return a or b.
+
+Note: a and b are not ordered!
+
+Examples (a, b) --> output (explanation)
+
+(1, 0) --> 1 (1 + 0 = 1)
+(1, 2) --> 3 (1 + 2 = 3)
+(0, 1) --> 1 (0 + 1 = 1)
+(1, 1) --> 1 (1 since both are same)
+(-1, 0) --> -1 (-1 + 0 = -1)
+(-1, 2) --> 2 (-1 + 0 + 1 + 2 = 2)
+Your function should only return a number, not the explanation about how you get that number.*/
+
+function getSum(a, b)
+{
+  var min = Math.min(a,b)
+  var max = Math.max(a,b)
+  var sum = 0
+
+  for (let i=min; i<=max; i++){
+    sum += i
+  }
+  return sum
+}
+
+//более эффективное решение через формулу, которая вычисляет сумму арефмитическое прогрессии (n*(a+b))/2
+// гдн n - это количество элементов прогрессии
+
+function getSum1(a, b)
+{
+  var min = Math.min(a,b)
+  var max = Math.max(a,b)
+  return (max-min+1)*(max+min)/2
+}
+
+/*Write a function named setAlarm/set_alarm/set-alarm/setalarm (depending on language) which receives two parameters.
+The first parameter, employed, is true whenever you are employed and the second parameter, vacation is true whenever you are on vacation.
+
+The function should return true if you are employed and not on vacation
+(because these are the circumstances under which you need to set an alarm). It should return false otherwise. Examples:
+
+employed | vacation
+true     | true     => false
+true     | false    => true
+false    | true     => false
+false    | false    => false*/
+
+var setAlarm = (employed, vacation) => employed === true && vacation === false
