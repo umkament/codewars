@@ -1108,3 +1108,6 @@ false    | true     => false
 false    | false    => false*/
 
 var setAlarm = (employed, vacation) => employed === true && vacation === false
+
+//можно записать еще короче
+const setAlarm1 = (employed, vacation) => employed && !vacation;
