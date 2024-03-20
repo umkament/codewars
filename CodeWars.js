@@ -1159,3 +1159,25 @@ function queueTime(customers, n) {
   }
   return Math.max(...tills)
 }
+
+// еще два примера один через for of, а второй через forEach()
+
+function queueTime1(customers, n) {
+  var w = new Array(n).fill(0);
+  for (let t of customers) {
+    let idx = w.indexOf(Math.min(...w));
+    w[idx] += t;
+  }
+  return Math.max(...w);
+}
+
+function queueTime2(customers, n) {
+  let tills = Array(n).fill(0);
+
+  customers.forEach((customer) => {
+    let nextTill = tills.indexOf(Math.min(...tills))
+    tills[nextTill] += customer;
+  });
+
+  return Math.max(...tills);
+}
