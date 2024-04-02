@@ -1373,6 +1373,111 @@ function getAge1(inputString){
   return parseInt(inputString[0]);
 }
 
+/*Your goal in this kata is to implement a difference function, which subtracts one list from another and returns the result.
+
+It should remove all values from list a, which are present in list b keeping their order.
+
+arrayDiff([1,2],[1]) == [2]
+If a value is present in b, all of its occurrences must be removed from the other:
+
+arrayDiff([1,2,2,2,3],[2]) == [1,3]*/
+
+//1 вариант решения задачи через метод forEach
+
+function arrayDiff(a, b) {
+  var result = [];
+
+  // Добавляем все элементы из массива a, которые отсутствуют в массиве b
+  a.forEach(el => {
+    if (!b.includes(el)) {
+      result.push(el);
+    }
+  });
+
+  return result;
+}
+
+//2 более короткий и должно быть более эффективный
+
+function array_diff(a, b) {
+  return a.filter(e => !b.includes(e));
+}
+
+//еще один вариант, через создания множества, с помощью Set()
+//такой способ может считаться эффективным в том случае, когда приходится работать с больши объемом данных
+
+function array_diff_(a, b) {
+  b = new Set(b);
+  return a.filter(v => !b.has(v));
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
