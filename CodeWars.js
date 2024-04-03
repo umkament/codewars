@@ -1412,6 +1412,90 @@ function array_diff_(a, b) {
 }
 
 
+/*You probably know the "like" system from Facebook and other pages. People can "like" blog posts, pictures or other items.
+We want to create the text that should be displayed next to such an item.
+
+Implement the function which takes an array containing the names of people that like an item.
+It must return the display text as shown in the examples:
+
+[]                                -->  "no one likes this"
+["Peter"]                         -->  "Peter likes this"
+["Jacob", "Alex"]                 -->  "Jacob and Alex like this"
+["Max", "John", "Mark"]           -->  "Max, John and Mark like this"
+["Alex", "Jacob", "Mark", "Max"]  -->  "Alex, Jacob and 2 others like this"
+Note: For 4 or more names, the number in "and 2 others" simply increases.*/
+
+
+function likes(names) {
+  if (names.length === 0) {
+    return 'no one likes this'
+  } else if (names.length === 1){
+    return `${names[0]} likes this`
+  } else if (names.length === 2){
+    return `${names[0]} and ${names[1]} like this`
+  } else if (names.length === 3){
+    return `${names[0]}, ${names[1]} and ${names[2]} like this`
+  } else if (names.length > 3){
+    return `${names[0]}, ${names[1]} and ${names.length-2} others like this`
+  }
+}
+
+//решение через switch-case (скопировано с кодварса, я бы сделала запись так же как и в своем примере через бэктики ``
+
+function likes_(names) {
+  names = names || [];
+  switch(names.length){
+    case 0: return 'no one likes this'; break;
+    case 1: return names[0] + ' likes this'; break;
+    case 2: return names[0] + ' and ' + names[1] + ' like this'; break;
+    case 3: return names[0] + ', ' + names[1] + ' and ' + names[2] + ' like this'; break;
+    default: return names[0] + ', ' + names[1] + ' and ' + (names.length - 2) + ' others like this';
+  }
+}
+
+//решение через создание объекта и метод Math.min()
+
+function lkikes__(names){
+  return {
+    0: 'no one likes this',
+    1: `${names[0]} likes this`,
+    2: `${names[0]} and ${names[1]} like this`,
+    3: `${names[0]}, ${names[1]} and ${names[2]} like this`,
+    4: `${names[0]}, ${names[1]} and ${names.length-2} others like this`
+  }[Math.min(4,names.length)]
+}
+/*The goal of this exercise is to convert a string to a new string where each character
+in the new string is "(" if that character appears only once in the original string, or ")"
+if that character appears more than once in the original string. Ignore capitalization
+when determining if a character is a duplicate.
+
+Examples
+
+"din"      =>  "((("
+"recede"   =>  "()()()"
+"Success"  =>  ")())())"
+"(( @"     =>  "))(("
+Notes
+
+Assertion messages may be unclear about what they display in some languages.
+If you read "...It Should encode XXX", the "XXX" is the expected result, not the input!*/
+
+
+//создаем отдельно объект и стрингу
+function duplicateEncode(word){
+  word = word.toLowerCase()
+  let obj = {}
+  let newStr = ''
+
+  for (let char of word){
+    obj[char] = (obj[char] || 0) + 1
+  }
+  for (let char of word){
+    newStr += (obj[char] === 1) ? '(' : ')'
+  }
+  return newStr
+}
+
 
 
 
