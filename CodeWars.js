@@ -1496,6 +1496,19 @@ function duplicateEncode(word){
   return newStr
 }
 
+//второй вариант решения, a - элемент, i - индекс элемента, w - сам массив элементов
+// в связи с тем, что i не используется аргументы могут быть записаны следующим образом
+// function (a, _, w) {...
+
+function duplicateEncode_(word){
+  return word
+     .toLowerCase()
+     .split('')
+     .map( function (a, i, w) {
+       return w.indexOf(a) === w.lastIndexOf(a) ? '(' : ')'
+     })
+     .join('');
+}
 
 
 
