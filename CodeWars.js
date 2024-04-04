@@ -1537,6 +1537,21 @@ function friend_(friends){
   return friends.filter(n => n.length === 4)
 }
 
+/*Given an array of integers as strings and numbers, return the sum of the array values as if all were numbers.
+
+Return your answer as a number.*/
+
+function sumMix(x){
+  return x.reduce((sum, el)=>{
+    return sum += Number(el)
+  }, 0)
+}
+
+//2-й способ
+
+function sumMix_(x){
+  return x.map(a => +a).reduce((a, b) => a + b);
+}
 
 
 
